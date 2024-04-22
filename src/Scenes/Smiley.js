@@ -81,6 +81,26 @@ class Smiley extends Phaser.Scene {
             my.sprite.smile.visible = true;
             my.sprite.dimple.visible = false;
         });
+
+        
+        //Event Input: transition scenes
+        this.input.keyboard.on('keydown-M', (event) => {
+            //transition scenes
+            console.log("changed scenes");
+            this.scene.start('mouseSmiley');
+        });
+        
+        /*
+        this.Mkey = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.M);
+        if(Phaser.Input.Keyboard.JustDown(this.Mkey)) {
+            console.log("changed scenes");
+            this.scene.start('mouseSmiley');
+        }
+        */
+        
+
+        
+
     }
 
     update() {
@@ -88,6 +108,7 @@ class Smiley extends Phaser.Scene {
         //Polling input: Peace hand
         let my = this.my;    // create an alias to this.my for readability
         if(this.Pkey.isDown) {
+            console.log("pkey");
             my.sprite.leftOpenHand.visible = false;
             my.sprite.leftPeaceHand.visible = true;
         }

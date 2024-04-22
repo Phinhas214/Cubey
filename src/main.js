@@ -19,9 +19,9 @@ let config = {
     render: {
         pixelArt: false  // prevent pixel art from getting blurred when scaled
     },
-    width: 800,
-    height: 600,
-    scene: [Smiley]
+    width: 1440,
+    height: 1000,
+    scene: [Smiley, MouseSmiley]
 }
 
 const game = new Phaser.Game(config);
